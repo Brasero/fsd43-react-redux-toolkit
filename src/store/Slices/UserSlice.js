@@ -19,7 +19,17 @@ export const fetchTown = createAsyncThunk(
 const UserSlice = createSlice({
     name: 'user',
     initialState: {
-        users: [],
+        users: [
+            {
+                id: userId++,
+                name: 'Dardagnan',
+                town: {
+                    name: 'Metz',
+                    zipCode: '57000',
+                    context: 'Lorraine, 57, Grand-Est'
+                }
+            }
+        ],
         proposals: [],
         user: {
             name: '',
@@ -53,6 +63,9 @@ const UserSlice = createSlice({
         },
         changeName(state, action) {
             state.user.name = action.payload
+        },
+        addUserFromCouple(state, action) {
+            state.users = state.users.concat([action.payload])
         }
     },
     extraReducers: (builder) => {
@@ -77,5 +90,5 @@ const UserSlice = createSlice({
     }
 })
 
-export const {changeName, setUser, resetUserField, changeUserField, addUser, removeUser, resetProposals} = UserSlice.actions
+export const {addUserFromCouple, changeName, setUser, resetUserField, changeUserField, addUser, removeUser, resetProposals} = UserSlice.actions
 export default UserSlice

@@ -1,39 +1,22 @@
 import {configureStore} from "@reduxjs/toolkit";
-import UserSlice, {changeName} from "./Slices/UserSlice.js";
+import UserSlice from "./Slices/UserSlice.js";
 import HorseSlice from "./Slices/HorseSlice.js";
+import CoupleReducer from "./Slices/CoupleSlice.js"
+import userNameMiddleware from "./middleware/userNameMiddleware.js";
+import proposalMiddleware from "./middleware/proposalMiddleware.js";
+import coupleMiddleware from "./middleware/coupleMiddleware.js";
 
-const proposalMiddleware = (store) => (next) => (action) => {
-    const nextAction = next(action)
-    const actions = [
-        UserSlice.actions.addUser.toString(),
-        UserSlice.actions.setUser.toString()
-    ]
-
-    if (actions.includes(action.type)) {
-        store.dispatch(UserSlice.actions.resetProposals())
-    }
-
-    return nextAction
-}
-
-const userNameMiddleware = (store) => (next) => (action) => {
-    const nextAction = next(action)
-
-    if (action.type === UserSlice.actions.changeUserField.toString() && action.payload.name === 'name') {
-        store.dispatch(changeName(action.payload.value))
-    }
-
-    return nextAction
-}
 
 const store = configureStore({
     reducer: {
         user: UserSlice.reducer,
-        horse: HorseSlice.reducer
+        horse: HorseSlice.reducer,
+        couple: CoupleReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([
         proposalMiddleware,
-        userNameMiddleware
+        userNameMiddleware,
+        coupleMiddleware
     ])
 })
 

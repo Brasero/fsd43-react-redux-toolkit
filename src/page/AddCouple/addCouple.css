@@ -1,0 +1,101 @@
+.coupleForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+    align-items: center;
+    margin-top: 50px;
+    padding: 1rem;
+}
+.selectGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.coupleLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    border-radius: 5px;
+    padding: 0 0 0 1rem;
+    backdrop-filter: brightness(50%);
+    -webkit-backdrop-filter: brightness(50%);
+}
+
+.coupleLabel select {
+    width: 70%;
+    height: auto;
+    border: none;
+    text-align: right;
+    padding: 0.3rem 1rem;
+    outline: none;
+}
+
+
+.coupleButton {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: 25px;
+}
+
+.coupleButton input {
+    background: none;
+    border: 1px solid #fff;
+    padding: 0 1rem;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+    transition: all .3s ease-in-out;
+}
+
+.coupleButton input:hover {
+    background: #fff;
+    color: #213547;
+}
+
+.coupleList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 50px;
+}
+
+.listContainer {
+    list-style: none;
+    width: 50%;
+}
+
+.listItem {
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #646cff;
+    padding: 0.3rem 1rem;
+}
+
+.suppressButton {
+    background: none;
+    border: 1px solid darkred;
+    color: red;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.suppressButton:hover {
+    background: darkred;
+    color: #fff;
+    border: 1px solid transparent;
+}

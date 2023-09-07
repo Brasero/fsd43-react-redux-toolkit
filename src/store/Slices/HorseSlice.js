@@ -1,7 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    horses: []
+    horses: [
+        {
+            name: 'tagada'
+        }
+    ]
 }
 
 const HorseSlice = createSlice({
