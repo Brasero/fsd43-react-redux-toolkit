@@ -1,0 +1,15 @@
+.nav {
+    width: 100%;
+    height: 100px;
+    background: #213547;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: flex-end;
+    padding: 0.7rem 1rem;
+    position: relative;
+}
+
+.nav_link:hover {
+    color: var(--hover-color) !important;
+}

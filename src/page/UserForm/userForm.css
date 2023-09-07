@@ -1,0 +1,39 @@
+.userForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form_title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.town_label {
+    position: relative;
+    flex-direction: column;
+}
+
+.form_label {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+}
+
+.form_button {
+    align-self: center;
+    width: 275px;
+    height: 45px;
+    background: var(--inactive-color);
+    border: none;
+    font-size: 2rem;
+    transition: all .3s ease-in;
+}
+
+.form_button:hover {
+    background: var(--hover-color);
+}

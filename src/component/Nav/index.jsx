@@ -1,11 +1,20 @@
 import {NavLink} from "react-router-dom";
+import './nav.css';
+
+const navStyle = ({isActive}) => {
+    return {
+        color: isActive ? 'var(--primary-color)' : 'var(--inactive-color)',
+    }
+}
 
 const Nav = () => {
 
     return (
-        <nav>
-            <NavLink to={'/'} >Formulaire</NavLink>
-            <NavLink to={'/userList'}>Liste</NavLink>
+        <nav className={'nav'}>
+            <NavLink style={navStyle} className={'nav_link'} to={'/'} >Formulaire utilisateur</NavLink>
+            <NavLink style={navStyle} className={'nav_link'} to={'/userList'}>Liste des utilisateurs</NavLink>
+            <NavLink style={navStyle} className={'nav_link'} to={'/horseForm'} >Formulaire de monture</NavLink>
+            <NavLink style={navStyle} className={'nav_link'} to={'/horseList'}>Liste de montures</NavLink>
         </nav>
     )
 }

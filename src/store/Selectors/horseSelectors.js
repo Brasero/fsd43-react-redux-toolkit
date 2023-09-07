@@ -1,0 +1,1 @@
+export const selectHorses = (state) => state.horse.horses;

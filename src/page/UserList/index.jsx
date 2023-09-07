@@ -10,25 +10,28 @@ const UserList = () => {
     }
 
     return (
-        <ul>
-            {
-                users.length > 0 ? (
-                    users.map((user, index) => {
-                        return (
-                            <li key={`${user.name}-${index}`}>
-                                {user.name}
-                                <button
-                                    role={'button'}
-                                    onClick={() => handleClick(user)}
-                                >X</button>
-                            </li>
-                        )
-                    })
-                ) : (
-                    <span>Aucun utilisateur</span>
-                )
-            }
-        </ul>
+        <>
+            <h1>Liste des utilisateurs</h1>
+            <ul>
+                {
+                    users.length > 0 ? (
+                        users.map((user, index) => {
+                            return (
+                                <li key={`${user.name}-${index}`}>
+                                    {user.name}
+                                    <button
+                                        role={'button'}
+                                        onClick={() => handleClick(user)}
+                                    >X</button>
+                                </li>
+                            )
+                        })
+                    ) : (
+                        <span>Aucun utilisateur</span>
+                    )
+                }
+            </ul>
+        </>
     )
 }
 
