@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {selectProposals} from "../../store/Selectors/userSelectors.js";
-import {setUser} from "../../store/Slices/UserSlice.jsx";
+import {setUser} from "../../store/Slices/UserSlice.js";
 
 const ProposalsPopUp = () => {
 

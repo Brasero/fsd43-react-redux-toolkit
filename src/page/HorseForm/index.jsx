@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {addHorse} from "../../store/Slices/HorseSlice.jsx";
+import {addHorse} from "../../store/Slices/HorseSlice.js";
 
 const HorseForm = () => {
 

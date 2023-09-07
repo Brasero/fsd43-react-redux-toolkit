@@ -1,7 +1,7 @@
 import {useState} from "react";
 import './userForm.css';
 import {useDispatch, useSelector} from "react-redux";
-import {addUser, changeUserField, fetchTown, resetProposals, resetUserField} from "../../store/Slices/UserSlice.jsx";
+import {addUser, changeUserField, fetchTown, resetProposals, resetUserField} from "../../store/Slices/UserSlice.js";
 import ProposalsPopUp from "../ProposalsPopUp/index.jsx";
 import {selectUserField} from "../../store/Selectors/userSelectors.js";
 

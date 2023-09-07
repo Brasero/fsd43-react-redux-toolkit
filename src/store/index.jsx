@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
-import UserSlice, {changeName} from "./Slices/UserSlice.jsx";
-import HorseSlice from "./Slices/HorseSlice.jsx";
+import UserSlice, {changeName} from "./Slices/UserSlice.js";
+import HorseSlice from "./Slices/HorseSlice.js";
 
 const proposalMiddleware = (store) => (next) => (action) => {
     const nextAction = next(action)

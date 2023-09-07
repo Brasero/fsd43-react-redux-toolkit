@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {selectHorses} from "../../store/Selectors/horseSelectors.js";
-import {removeHorse} from "../../store/Slices/HorseSlice.jsx";
+import {removeHorse} from "../../store/Slices/HorseSlice.js";
 
 const HorseList = () => {
 
